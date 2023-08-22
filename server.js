@@ -8,10 +8,9 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://prabesharyal.info.np',
-  origin: 'https://prabesharyal-info.web.app'
-}));
+app.use(cors({ origin: ['https://prabesharyal.info.np', 'https://prabesharyal-info.web.app'] }));
+
+
 
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use(express.json());
